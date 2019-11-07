@@ -1,6 +1,6 @@
 package suijijiafa;
 
-public class model50 {
+public class Fifty {
 
 	static int a;static int b;		//记录随机数
 	static char c;				//记录符号
