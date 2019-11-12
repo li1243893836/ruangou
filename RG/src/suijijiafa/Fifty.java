@@ -35,7 +35,7 @@ public class Fifty {
 		int i = 0;
 		for(Object object:set) {
 			i++;
-			System.out.print(object + "=" + "\t");
+			System.out.print(object + "=" + "\t\t");
 			if(i % 5 == 0) {
 				System.out.println();
 			}
@@ -44,7 +44,7 @@ public class Fifty {
 	
 	public void out() {			//输出结果
 		for(int i = 0;i < 50; i++ ) {
-			System.out.println("第"+(i+1)+"道题答案为："+e[i]);
+			System.out.println("第" + (i + 1) + "道题答案为：" + e[i]);
 		}
 	}
 	
