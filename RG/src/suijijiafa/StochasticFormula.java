@@ -18,13 +18,25 @@ public class StochasticFormula {
 				}while((RandomNum1 + RandomNum2 > 100) || (RandomNum1 - RandomNum2 < 0));
 			if((int)(Math.random()*100)%2 == 0) {		//控制加减法
 				Symbol = '+';
-				set.add(RandomNum1+"+"+RandomNum2);
-				Result[i] = RandomNum1 + RandomNum2;
+				set.add(RandomNum1+"+"+RandomNum2);			//写入算式
+				Result[i] = RandomNum1 + RandomNum2;		//记录算式结果
 			}
 			else {
 				Symbol = '-';
 				set.add(RandomNum1 + "-" + RandomNum2);
 				Result[i] = RandomNum1 - RandomNum2;
+			}
+			int j = 0;
+			String Temp1 = "RandomNum1" + Symbol + "RandomNum2";		//记录本次产生的随机算式
+			for(Object object1:set) {									//去除那些类似1+3、3+1的重复算式
+				j++;
+				String Temp = "RandomNum2" + Symbol + "RandomNum1";		//记录与本次产生的随机算式相反算式
+				if(Temp==object1) {
+					break;
+				}
+			}
+			if(j!=set.size()) {								//j!=当前大小说明，有重复，remove现在的算式
+				set.remove(Temp1);
 			}
 			
 		}
