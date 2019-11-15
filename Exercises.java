@@ -5,7 +5,7 @@ public class Exercises {
 	Formula ran = new Formula();
 	
 	//输出算式的结果
-	public void OutputResult() {
+	public void outputResult() {
 		int i = 0;
 		for(i = 0;i < 50;i++) {
 			System.out.println("第"+(i+1)+"道题的答案为："+Formula.Result[i]+"\t\t");
@@ -31,7 +31,7 @@ public class Exercises {
 		}
 	}
 	//输出算式
-	public void OutputExe() {
+	public void outputExe() {
 		
 		int i = 0;
 		for(i = 0; i < 50 ;i++) {						//生成算式
@@ -40,7 +40,7 @@ public class Exercises {
 		
 			}
 	}
-	public void GenFormula() {
+	public void genFormula() {
 		int i = 0;
 		for(Object object:Formula.set) {				//输出算式
 			i++;
