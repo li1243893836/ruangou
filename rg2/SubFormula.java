@@ -10,14 +10,15 @@ import java.util.LinkedHashSet;
 public class SubFormula extends Arithmetic{
 
 	@Override
-	public LinkedHashSet Formula() {	//重写父类方法
+	public LinkedHashSet<String> Formula() {	//重写父类方法
 		// TODO 自动生成的方法存根
 		int[] num = super.GenRan();
 		int fitnum = num[0];
 		int secnum = num[1];
 		char symbol = '-';
+		//跟加法子类一样的道理
 		String s = String.valueOf(fitnum) + String.valueOf(symbol) + String.valueOf(secnum) + "=";
-		LinkedHashSet<String> set = new LinkedHashSet();
+		LinkedHashSet<String> set = new LinkedHashSet<String>();
 		set.add(s);
 		return set;
 	}
