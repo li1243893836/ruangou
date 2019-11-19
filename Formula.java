@@ -18,7 +18,7 @@ public class Formula {
 			}while((random1 + random2 > 100) || (random1 - random2 < 0));
 		if((int)(Math.random()*100)%2 == 0) {		//控制加减法
 			symbol = '+';
-			set.add(RandomNum1+"+"+RandomNum2);			//写入算式
+			set.add(randomNum1+"+"+RandomNum2);			//写入算式
 			result[i] = random1 + random2;		//记录算式结果
 		}
 		else {
