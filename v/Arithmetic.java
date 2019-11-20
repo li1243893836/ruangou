@@ -1,17 +1,19 @@
-package com.itly.rg3;
+package com.itly.rg3.v;
 
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 
 /**类描述：算式抽象类
  *@author: ly
  *@date： 日期：2019/11/15 时间：2019年11月15日17:15:28
- *@version 2.0
- *修改时间：2019年11月16日09:45:00
- *修改内容：注释
+ *@version 3.0
+ *修改时间：2019年11月20日12:55:35
+ *修改内容：利用map集合存储算式和集合
  */
+@SuppressWarnings("all")
 public abstract class Arithmetic {
 
-	public abstract LinkedHashSet<String> Formula();	//生成算式的抽象方法
+	public abstract LinkedHashMap<String,Integer> Formula();	//生成算式的抽象方法
 	
 	public int[] GenRan() {	//生成随机数
 		int num1,num2;		//记录生成的随机数
