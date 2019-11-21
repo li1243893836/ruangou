@@ -1,4 +1,4 @@
-package com.itly.rg4;
+package com.itly.rg2.v;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -10,7 +10,7 @@ import java.util.Map.Entry;
  *@date： 日期：2019/11/20 时间：2019年11月20日18:47:46
  *@version 1.0
  */
-public class SubExer {
+public class SubExer extends Generate{
 
 	//存储生成的随机算式和答案
 	Map<String, Integer> subMap = new LinkedHashMap<>();
@@ -35,45 +35,10 @@ public class SubExer {
 		}
 
 	}
-
-
-
-	//输出随机算式
-	public void OutSub() {
-		int i = 0;
-		Set<Entry<String,Integer>> set = subMap.entrySet();
-		//输出随机算式
-		for(Entry<String,Integer> entry : set) {
-
-			System.out.print((i + 1) + ":" + entry.getKey() +"  \t");
-
-			//每五个算式为一行
-			if((i + 1) % 5 == 0) {
-				System.out.println();
-			}
-			i++;
-		}
-
-	}
-
-	//输出随机算式的答案
-	public void OutSAnser() {
-		int i = 0;
-		Set<Entry<String,Integer>> set = subMap.entrySet();
-		//输出随机算式
-		System.out.println();
-		System.out.println("--------------------------华丽的分割线-------------------------------------");
-		for(Entry<String,Integer> entry : set) {
-
-			System.out.print((i + 1) + ":" + entry.getValue() +" \t\t");
-
-			//每五个答案为一行
-			if((i + 1) % 5 == 0) {
-				System.out.println();
-			}
-			i++;
-		}
-	}
-
-
+	public void PrintS(int num) {
+		Subtraction(num);
+		//继承父类方法
+		OutForm(subMap);
+		OutAnser(subMap);		
+	}	
 }

@@ -1,4 +1,4 @@
-package com.itly.rg4;
+package com.itly.rg2.v;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Set;
  *@version 1.0
  */
 @SuppressWarnings("all")
-public class AddExer {
+public class AddExer extends Generate{
 
 	//存储生成的随机算式和答案
 	Map<String, Integer> addMap = new LinkedHashMap<>();
@@ -36,43 +36,10 @@ public class AddExer {
 			}
 
 		}
-	//输出随机算式
-	public void OutAdd() {
-		int i = 0;
-		Set<Entry<String,Integer>> set = addMap.entrySet();
-		//输出随机算式
-		for(Entry<String,Integer> entry : set) {
-
-			System.out.print((i + 1) + ":" + entry.getKey() +" \t");
-
-			//每五个算式为一行
-			if((i + 1) % 5 == 0) {
-				System.out.println();
-			}
-			i++;
-		}
-
-	}
-
-	//输出随机算式的答案
-	public void OutAnser() {
-		int i = 0;
-		Set<Entry<String,Integer>> set = addMap.entrySet();
-		//输出随机算式
-		System.out.println();
-		System.out.println("--------------------------华丽的分割线-------------------------------------");
-		for(Entry<String,Integer> entry : set) {
-
-			System.out.print((i + 1) + ":" + entry.getValue() +" \t\t");
-
-			//每五个答案为一行
-			if((i + 1) % 5 == 0) {
-				System.out.println();
-			}
-			i++;
-		}
-	}
-
-
-
+		public void PrintA(int num) {
+			Addition(num);
+			//继承父类方法
+			OutForm(addMap);
+			OutAnser(addMap);		
+		}		
 }

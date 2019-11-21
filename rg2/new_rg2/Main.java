@@ -1,4 +1,4 @@
-package com.itly.rg4;
+package com.itly.rg2.v;
 
 import java.util.Scanner;
 
@@ -27,19 +27,13 @@ public class Main {
 		System.out.println("请选择要产生的习题的数量：");
 		int num = sc.nextInt();
 		if(a == 1) {
-			add.Addition(num);
-			add.OutAdd();
-			add.OutAnser();
+			add.PrintA(num);
 		}
 		else if(a == 2) {
-			sub.Subtraction(num);
-			sub.OutSub();
-			sub.OutSAnser();
+			sub.PrintS(num);
 		}
 		else if(a == 3) {
-			as.ASubtraction(num);
-			as.OutAS();
-			as.OutASnser();
+			as.PrintAS(num);
 		}
 		else {
 			System.out.println("输入错误请重新输入！！！");
